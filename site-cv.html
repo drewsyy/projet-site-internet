@@ -24,7 +24,7 @@
         <section class="profiles">
             <div class="profile">
                 <div class="avatar"></div>
-                <div class="social-icons hidden">
+                <div class="social-icons">
                     <a href="#"><img src="icon1.png" alt="Social 1"></a>
                     <a href="#"><img src="icon2.png" alt="Social 2"></a>
                     <a href="#"><img src="icon3.png" alt="Social 3"></a>
@@ -36,7 +36,7 @@
             </div>
             <div class="profile">
                 <div class="avatar"></div>
-                <div class="social-icons hidden">
+                <div class="social-icons">
                     <a href="#"><img src="icon1.png" alt="Social 1"></a>
                     <a href="#"><img src="icon2.png" alt="Social 2"></a>
                     <a href="#"><img src="icon3.png" alt="Social 3"></a>
@@ -48,7 +48,7 @@
             </div>
             <div class="profile">
                 <div class="avatar"></div>
-                <div class="social-icons hidden">
+                <div class="social-icons">
                     <a href="#"><img src="icon1.png" alt="Social 1"></a>
                     <a href="#"><img src="icon2.png" alt="Social 2"></a>
                     <a href="#"><img src="icon3.png" alt="Social 3"></a>
@@ -60,7 +60,7 @@
             </div>
             <div class="profile">
                 <div class="avatar"></div>
-                <div class="social-icons hidden">
+                <div class="social-icons">
                     <a href="#"><img src="icon1.png" alt="Social 1"></a>
                     <a href="#"><img src="icon2.png" alt="Social 2"></a>
                     <a href="#"><img src="icon3.png" alt="Social 3"></a>
@@ -77,15 +77,6 @@
         function toggleMenu() {
             document.getElementById("menu").classList.toggle("hidden");
         }
-        
-        document.querySelectorAll('.profile').forEach(profile => {
-            profile.addEventListener('mouseenter', () => {
-                profile.querySelector('.social-icons').classList.remove('hidden');
-            });
-            profile.addEventListener('mouseleave', () => {
-                profile.querySelector('.social-icons').classList.add('hidden');
-            });
-        });
     </script>
 </body>
 </html>
