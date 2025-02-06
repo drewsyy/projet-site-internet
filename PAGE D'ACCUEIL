@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitrine Collaborative</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <p>Bienvenue sur notre vitrine collaborative !<br>
+               Nous sommes quatre amis passionnés réunis pour vous présenter nos parcours, nos réalisations et notre créativité. Explorez nos CV, portfolio et projets, conçus pour surprendre et séduire les entreprises en quête de talents d'exception.</p>
+               <button class="menus-button"
+                onclick="toggleMenus()">☰ </button>
+               <div class="menus"    id="menus">
+                   <a href="./index.html" onclick="closeMenu()" > ACCEUIL</a>
+                   <a href="./index.html" onclick="closeMenu()">CV</a>
+                   <a href="./index.html" onclick="closeMenu()">PORTOFOLIO</a>
+               </div>            
+        </header>
+        
+        <section class="profiles">
+            <div class="profile">
+                <div class="avatar"></div>
+                
+                <div class="buttons">
+                    <button class="cv">
+                          <a href="./pageCV.html">CV</a>
+                           </button>
+                    <button class="portfolio"> 
+                         <a href="wwww.google.com"> PORTOFOLIO</a></button>
+                </div>
+            </div>
+       
+            <div class="profile">
+                <div class="avatar"></div>
+                
+                <div class="buttons">
+                    <button class="cv">
+                          <a href="./pageCV.html">CV</a>
+                           </button>
+                    <button class="portfolio"> 
+                         <a href="wwww.google.com"> PORTOFOLIO</a></button>
+                </div>
+            </div>
+
+
+            <div class="profile">
+                <div class="avatar"></div>
+                
+                <div class="buttons">
+                    <button class="cv">
+                          <a href="./pageCV.html">CV</a>
+                           </button>
+                    <button class="portfolio"> 
+                         <a href="wwww.google.com"> PORTOFOLIO</a></button>
+                </div>
+            </div>
+
+
+            <div class="profile">
+                <div class="avatar"></div>
+                
+                <div class="buttons">
+                    <button class="cv">
+                          <a href="./pageCV.html">CV</a>
+                           </button>
+                    <button class="portfolio"> 
+                         <a href="wwww.google.com"> PORTOFOLIO</a></button>
+                </div>
+            </div>
+
+
+
+            <script>
+                function toggleMenus() {
+                    const menus    = document.getElementById("menus");
+                    menus.style.display = (menus.style.display === "block") ?
+
+                    "none" : "block";
+                }
+        
+                function closeMenus() {
+                    document.getElementById("menus").style.display = "none";
+                }
+        
+                // Fermer le menu si on clique en dehors
+                document.addEventListener("click", function(event) {
+                    const menus = document.getElementById("menus");
+                    const button = document.querySelector(".menus-button");
+                    if (!menus.contains(event.target) && !button.contains
+                    (event.target)) {
+                        menus.style.display = "none";
+                    }
+                });
+            </script>
+</body>
+</html>
