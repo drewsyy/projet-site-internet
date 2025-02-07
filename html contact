@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Contactez Nous</title>
+    <style>
+        textarea {
+            height: 150px; /* Trois fois plus grande que les autres champs par défaut */
+            resize: none; /* Désactive le redimensionnement manuel */
+            overflow: hidden; /* Cache la barre de défilement */
+            width: 100%; /* Même largeur que les autres champs */
+        }
+    </style>
+</head>
+<body>
+    <h1>Contactez nous</h1>
+    <div class="contact-form">
+        <form id="contactForm">
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" name="prenom" placeholder="Ali" required><br>
+
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" placeholder="Pineda" required><br>
+
+            <label for="email">Adresse Mail</label>
+            <input type="email" id="email" name="email" placeholder="hello@alipinedacreate.com" required><br>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Écrivez votre message ici..." required></textarea><br>
+
+            <button type="submit" id="submitButton" disabled></button>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('contactForm');
+        const inputs = form.querySelectorAll('input, textarea');
+        const submitButton = document.getElementById('submitButton');
+        const messageTextarea = document.getElementById('message');
+
+        function checkInputs() {
+            const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
+            if (allFilled) {
+                submitButton.textContent = 'Envoyer';
+                submitButton.disabled = false;
+            } else {
+                submitButton.textContent = '';
+                submitButton.disabled = true;
+            }
+        }
+
+        function adjustHeight(element) {
+            element.style.height = 'auto';
+            element.style.height = (element.scrollHeight) + 'px';
+        }
+
+        inputs.forEach(input => {
+            input.addEventListener('input', checkInputs);
+        });
+
+        messageTextarea.addEventListener('input', function() {
+            adjustHeight(this);
+        });
+    </script>
+</body>
+</html>
