@@ -1,0 +1,83 @@
+<index class="html"></index>
+<<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitrine Collaborative</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <p>Bienvenue sur notre vitrine collaborative !<br>
+               Nous sommes quatre amis passionnés réunis pour vous présenter nos parcours, nos réalisations et notre créativité. Explorez nos CV, portfolio et projets, conçus pour surprendre et séduire les entreprises en quête de talents d'exception.</p>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <nav id="menu" class="hidden">
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">CV</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section class="profiles">
+            <div class="profile">
+                <div class="avatar"></div>
+                <div class="social-icons">
+                    <a href="#"><img src="icon1.png" alt="Social 1"></a>
+                    <a href="#"><img src="icon2.png" alt="Social 2"></a>
+                    <a href="#"><img src="icon3.png" alt="Social 3"></a>
+                </div>
+                <div class="buttons">
+                    <button class="cv">CV</button>
+                    <button class="portfolio">PORTFOLIO</button>
+                </div>
+            </div>
+            <div class="profile">
+                <div class="avatar"></div>
+                <div class="social-icons">
+                    <a href="#"><img src="icon1.png" alt="Social 1"></a>
+                    <a href="#"><img src="icon2.png" alt="Social 2"></a>
+                    <a href="#"><img src="icon3.png" alt="Social 3"></a>
+                </div>
+                <div class="buttons">
+                    <button class="cv">CV</button>
+                    <button class="portfolio">PORTFOLIO</button>
+                </div>
+            </div>
+            <div class="profile">
+                <div class="avatar"></div>
+                <div class="social-icons">
+                    <a href="#"><img src="icon1.png" alt="Social 1"></a>
+                    <a href="#"><img src="icon2.png" alt="Social 2"></a>
+                    <a href="#"><img src="icon3.png" alt="Social 3"></a>
+                </div>
+                <div class="buttons">
+                    <button class="cv">CV</button>
+                    <button class="portfolio">PORTFOLIO</button>
+                </div>
+            </div>
+            <div class="profile">
+                <div class="avatar"></div>
+                <div class="social-icons">
+                    <a href="#"><img src="icon1.png" alt="Social 1"></a>
+                    <a href="#"><img src="icon2.png" alt="Social 2"></a>
+                    <a href="#"><img src="icon3.png" alt="Social 3"></a>
+                </div>
+                <div class="buttons">
+                    <button class="cv">CV</button>
+                    <button class="portfolio">PORTFOLIO</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <script>
+        function toggleMenu() {
+            document.getElementById("menu").classList.toggle("hidden");
+        }
+    </script>
+</body>
+</html>
