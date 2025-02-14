@@ -1,59 +1,81 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Contactez Nous</title>
-    <link rel="stylesheet" href="contact.css"> <!-- Lien vers le fichier CSS externe -->
-</head>
-<body>
-    <h1>Contactez nous</h1>
-    <div class="contact-form">
-        <form id="contactForm">
-            <label for="prenom">Prénom</label>
-            <input type="text" id="prenom" name="prenom" placeholder="Ali" required><br>
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #6EC6FF; /* Bleu clair */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
 
-            <label for="nom">Nom</label>
-            <input type="text" id="nom" name="nom" placeholder="Pineda" required><br>
+/* Conteneur du formulaire */
+.contact-form {
+    background-color: #2C2C2C; /* Bleu foncé */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 400px;
+}
 
-            <label for="email">Adresse Mail</label>
-            <input type="email" id="email" name="email" placeholder="hello@alipinedacreate.com" required><br>
+/* Titre */
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Écrivez votre message ici..." required></textarea><br>
+/* Labels */
+label {
+    display: block;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    margin-top: 10px;
+}
 
-            <button type="submit" id="submitButton" disabled></button>
-        </form>
-    </div>
+/* Champs de saisie */
+input, textarea {
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    <script>
-        const form = document.getElementById('contactForm');
-        const inputs = form.querySelectorAll('input, textarea');
-        const submitButton = document.getElementById('submitButton');
-        const messageTextarea = document.getElementById('message');
+/* Bouton */
+button {
+    width: 100%;
+    background-color: #FF5C5C;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 16px;
+}
 
-        function checkInputs() {
-            const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
-            if (allFilled) {
-                submitButton.textContent = 'Envoyer';
-                submitButton.disabled = false;
-            } else {
-                submitButton.textContent = '';
-                submitButton.disabled = true;
-            }
-        }
+button:disabled {
+    background-color: #A9A9A9;
+    cursor: not-allowed;
+}
 
-        function adjustHeight(element) {
-            element.style.height = 'auto';
-            element.style.height = (element.scrollHeight) + 'px';
-        }
+/* Ajustement du champ de texte */
+textarea {
+    height: 100px;
+    resize: none;
+}
 
-        inputs.forEach(input => {
-            input.addEventListener('input', checkInputs);
-        });
-
-        messageTextarea.addEventListener('input', function() {
-            adjustHeight(this);
-        });
-    </script>
-</body>
-</html>
+/* Titre "Contactez nous" */
+h1 {
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+}
