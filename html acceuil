@@ -6,6 +6,8 @@
   <title>Vitrine Collaborative</title>
   <link rel="stylesheet" href="site.js">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="burger.css">
+ 
   
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -14,12 +16,12 @@
 
   <!-- Navigation -->
   <nav>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <ul class="nav-links">
-      <li><a href="#">Accueil</a></li>
-      <li><a href="#">CV</a></li>
-      <li><a href="#">Portfolio</a></li>
-    </ul>
+    <button class="menus-button"
+    onclick="toggleMenus()">☰ </button>
+   <div class="menus"    id="menus">
+       <a href="./index.html" onclick="closeMenu()" > ACCEUIL</a>
+       <a href="./index.html" onclick="closeMenu()">CV</a>
+       <a href="./index.html" onclick="closeMenu()">PORTOFOLIO</a>
   </nav>
 
   <header>
@@ -66,7 +68,27 @@
     </div>
   </section>
 
-  <script src="script.js"></script>
+<script>
+
+
+function toggleMenus() {
+  const menus= document.getElementById("menus");
+  menus.style.display = (menus.style.display === "block") ?
+  "none" : "block";
+}
+
+function closeMenus() {
+  document.getElementById("menus").style.display = "none";
+}
+document.addEventListener("click", function(event) {
+  const menus = document.getElementById("menus");
+  const button = document.querySelector(".menus-button");
+  if (!menus.contains(event.target) && !button.contains
+  (event.target)) {
+      menus.style.display = "none";
+  }
+});
+</script>
 
 </body>
 </html>
