@@ -1,0 +1,19 @@
+// Affichage du menu filtre
+document.getElementById('filterToggle').addEventListener('click', function() {
+    document.getElementById('filterMenu').classList.toggle('visible');
+});
+
+// Gestion des catégories affichées
+document.querySelectorAll('.filter-option').forEach(option => {
+    option.addEventListener('change', function() {
+        let category = this.dataset.category; // Récupère la catégorie (sport, bénévolat, chantier)
+        let button = document.querySelector(`.category-button[data-category="${category}"]`); // Sélectionne le bouton correspondant
+
+        // Si l'option est cochée, affiche le bouton de la catégorie correspondante, sinon le cache
+        if (this.checked) {
+            button.classList.add('visible');
+        } else {
+            button.classList.remove('visible');
+        }
+    });
+});
