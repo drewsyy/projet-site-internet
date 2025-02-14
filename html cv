@@ -1,0 +1,61 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Andrew-Maurice GOMA</title>
+    <link rel="stylesheet" href="cv.css">
+</head>
+<body>
+    <div class="cv-container">
+        <header class="cv-header">
+            <div class="profile-pic"></div>
+            <div>
+                <h1>MOUNGONDO-BABOU GUENEL</h1>
+                <h2>Alternant en informatique</h2>
+            </div>
+            <div class="contact-info">
+                <p>Sucy-en-Brie, 94370</p>
+                <p>+33 7 52 72 06 73</p>
+                <p>baboumurphy@gmail.com</p>
+            </div>
+            <button class="menu-button" onclick="toggleMenu()">☰ </button>
+            <div class="menu" id="menu">
+                <a href="./index.html" onclick="closeMenu()">ACCEUIL</a>
+                <a href="./index.html" onclick="closeMenu()">CV</a>
+                <a href="./index.html" onclick="closeMenu()">PORTOFOLIO</a>
+            </div>
+        </header>
+
+        <section class="intro">
+            <p>Étudiant en BTS CIEL, passionné par l'informatique et la cybersécurité, je recherche une alternance pour l'année 2025-2026 afin de développer mes compétences techniques et renforcer mon expérience professionnelle. Dynamique, rigoureux et prêt à apprendre, je possède également un bon esprit d'équipe, acquis lors de mes expériences de bénévolat et de projets en groupe. Mon aisance en anglais est un atout supplémentaire pour évoluer dans un environnement international.</p>
+        </section>
+
+        <section class="cv-sections" id="section1">
+            <div class="cv-box experience">
+                <h3>Expérience Pro</h3>
+                <div class="hidden-content">
+                    <p>Détails de l'expérience professionnelle...</p>
+                </div>
+            </div>
+
+            <div class="cv-box formation" id="section2">
+                <h3>Formation</h3>
+                <div class="hidden-content">
+                    <p>Détails de la formation...</p>
+                </div>
+            </div>
+
+            <div class="cv-box competences" id="section3">
+                <h3>Compétences</h3>
+                <div class="hidden-content">
+                    <p>Compétences techniques et personnelles...</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    
+</body>
+</html>
+
+
