@@ -3,14 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Contactez Nous</title>
-    <style>
-        textarea {
-            height: 150px; /* Trois fois plus grande que les autres champs par défaut */
-            resize: none; /* Désactive le redimensionnement manuel */
-            overflow: hidden; /* Cache la barre de défilement */
-            width: 100%; /* Même largeur que les autres champs */
-        }
-    </style>
+    <link rel="stylesheet" href="contact.css"> <!-- Lien vers le fichier CSS externe -->
 </head>
 <body>
     <h1>Contactez nous</h1>
